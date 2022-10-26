@@ -15,4 +15,4 @@ app.use(express.text());
 app.use("/account", accountRouter);
 app.use("/auth", authRouter);
 
-app.listen(PORT, () => console.log(`Servidor levantado en el puerto ${PORT}`));
+app.listen(PORT, () => console.log(`Servidor on port ${PORT}`));

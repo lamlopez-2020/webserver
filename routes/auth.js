@@ -8,7 +8,7 @@ authRouter.get("/public", (req, res) => {
 });
 
 //Endpoints autenticado para todo usuario registrado
-authRouter.post("/authenticated", (res, req) => {
+authRouter.post("/authentication", (res, req) => {
   const { email, password } = req.body;
 
   if (!email || !password) return res.status(400).send();
@@ -18,11 +18,11 @@ authRouter.post("/authenticated", (res, req) => {
 
   if (user.password !== password) return res.status(401).send();
 
-  res.send(`Usuario ${user.name} autenticado`);
+  res.send(`User ${user.name} authenticated`);
 });
 
 //Endpoints autorizado para administrador
-authRouter.post("/authorized", (req, res) => {
+authRouter.post("/authorization", (req, res) => {
   const { email, password } = req.body;
 
   if (!email || !password) return res.status(400).send();
@@ -34,7 +34,7 @@ authRouter.post("/authorized", (req, res) => {
 
   if (user.role !== "admin") return res.status(403).send();
 
-  res.send(`Usuario administrador ${user.name}`);
+  res.send(`Administrator ${user.name}`);
 });
 
 export default authRouter;
