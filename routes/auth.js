@@ -8,7 +8,7 @@ authRouter.get("/public", (req, res) => {
 });
 
 //Endpoints autenticado para todo usuario registrado
-authRouter.post("/authentication", (res, req) => {
+authRouter.post("/authentication", (req, res) => {
   const { email, password } = req.body;
 
   if (!email || !password) return res.sendStatus(400);
