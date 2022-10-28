@@ -5,7 +5,7 @@ import cookieParser from "cookie-parser";
 import accountRouter from "./routes/account.js";
 import authRouter from "./routes/auth.js";
 import authSessionRouter from "./routes/auth_session.js";
-//import authTokenRouter from "./routes/auth_token.js";
+import authTokenRouter from "./routes/auth_token.js";
 
 dotenv.config();
 
@@ -23,6 +23,6 @@ app.use("/auth", authRouter);
 
 app.use("/auth-session", authSessionRouter);
 
-//app.use("/auth-token", authTokenRouter);
+app.use("/auth-token", authTokenRouter);
 
 app.listen(PORT, () => console.log(`Servidor on port ${PORT}`));

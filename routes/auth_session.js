@@ -27,7 +27,7 @@ authSessionRouter.post("/login", (req, res) => {
       httpOnly: true,
     });
 
-    return res.send();
+    return res.send(`User ${user.name} authenticated`);
   } catch (error) {
     return res.sendStatus(401);
   }
