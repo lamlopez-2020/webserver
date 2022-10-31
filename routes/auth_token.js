@@ -13,12 +13,12 @@ authTokenRouter.post("/login", async (req, res) => {
   try {
     const { guid } = authByEmailPwd(email, password);
 
-    //GENERAR TOKEN Y DEVOLVER TOKEN
-
+    //SE INTRODUCE EL PAYLOAD {guid}
     const jwtConstructor = new SignJWT({ guid });
 
     const encoder = new TextEncoder();
 
+    //GENERAR TOKEN Y DEVOLVER TOKEN
     const jwt = await jwtConstructor
       .setProtectedHeader({ alg: "HS256", typ: "JWT" })
       .setIssuedAt()
@@ -31,7 +31,7 @@ authTokenRouter.post("/login", async (req, res) => {
   }
 });
 
-//SOlicitud autenticidad con token para obtener el perfil del usuario
+//Solicitud autenticidad del token para obtener el perfil del usuario
 authTokenRouter.get("/profile", async (req, res) => {
   //Obtener cabecera del token
   const { authorization } = req.headers;
