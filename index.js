@@ -11,6 +11,7 @@ import authTokenRouter from "./routes/auth_token.js";
 dotenv.config();
 
 const PORT = Number(process.env.PORT) || 3000;
+
 const app = express();
 
 //Setting
