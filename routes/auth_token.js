@@ -2,7 +2,7 @@ import { Router } from "express";
 import { SignJWT, jwtVerify } from "jose";
 import { USERS_BBDD } from "../bbdd.js";
 import authByEmailPwd from "../helpers/auth-by-email-pwd.js";
-import validateLoginDTO from "../dto/validate_login_dto.js";
+import validateLoginDTO from "../dto/validate_login_DTO.js";
 
 const authTokenRouter = Router();
 

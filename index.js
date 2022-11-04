@@ -31,6 +31,8 @@ app.use("/auth-session", authSessionRouter);
 
 app.use("/auth-token", authTokenRouter);
 
-app.listen(PORT, () =>
+/* app.listen(PORT, () =>
   console.log(`Server ${app.get("appName")} on port ${app.get("port")}`)
-);
+); */
+
+export default app;
