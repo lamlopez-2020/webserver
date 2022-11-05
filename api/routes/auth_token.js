@@ -1,8 +1,8 @@
 import { Router } from "express";
 import { SignJWT, jwtVerify } from "jose";
-import { USERS_BBDD } from "../bbdd.js";
+import { USERS_BBDD } from "../../bbdd.js";
 import authByEmailPwd from "../helpers/auth-by-email-pwd.js";
-import validateLoginDTO from "../api/dto/validate_login_DTO.js";
+import validateLoginDTO from "../dto/validate_login_DTO.js";
 
 const authTokenRouter = Router();
 

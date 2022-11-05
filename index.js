@@ -1,10 +1,10 @@
 import express from "express";
 
 import cookieParser from "cookie-parser";
-import accountRouter from "./routes/account.js";
-import authRouter from "./routes/auth.js";
-import authSessionRouter from "./routes/auth_session.js";
-import authTokenRouter from "./routes/auth_token.js";
+import accountRouter from "./api/routes/account.js";
+import authRouter from "./api/routes/auth.js";
+import authSessionRouter from "./api/routes/auth_session.js";
+import authTokenRouter from "./api/routes/auth_token.js";
 
 const app = express();
 

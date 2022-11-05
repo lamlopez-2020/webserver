@@ -1,8 +1,10 @@
+import express from "express";
 console.clear();
 import dotenv from "dotenv";
-import app from "./index.js";
+//import app from "../index.js";
 
-dotenv.config();
+dotenv.config({ path: "../.env" });
+const app = express();
 
 const PORT = Number(process.env.PORT) || 3000;
 
@@ -10,6 +12,6 @@ const PORT = Number(process.env.PORT) || 3000;
 app.set("appName", "Node Course Desarrollo Util");
 app.set("port", PORT);
 
-const server = app.listen(app.get("port"), () =>
+export const server = app.listen(app.get("port"), () =>
   console.log(`Server ${app.get("appName")} on port ${app.get("port")}`)
 );

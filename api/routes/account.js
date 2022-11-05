@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { USERS_BBDD } from "../bbdd.js";
+import { USERS_BBDD } from "../../bbdd.js";
 
 const accountRouter = Router();
 //Middleware que logue la ip
@@ -9,7 +9,7 @@ accountRouter.use((req, res, next) => {
   next();
 });
 
-//Obtener los detalles de una cuenta 
+//Obtener los detalles de una cuenta
 accountRouter.get("/:guid", (req, res) => {
   const { guid } = req.params;
   const user = USERS_BBDD.find((user) => user.guid === guid);

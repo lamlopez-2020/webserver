@@ -1,4 +1,4 @@
-import { USERS_BBDD } from "../bbdd.js";
+import { USERS_BBDD } from "../../bbdd.js";
 
 const authByEmailPwd = (email, password) => {
   const user = USERS_BBDD.find((user) => user.email === email);
